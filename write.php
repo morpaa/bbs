@@ -233,7 +233,7 @@ if (!$subject) {
   chifable($filename, 'w');
   file_put_contents($filename, $nowtime, LOCK_EX);
 
-  file_put_contents($datname, $subject . $output, LOCK_EX);
+  file_put_contents($datname, $subject . "\n" . $output, LOCK_EX);
 }
 
 setcookie('name', $_POST['NAME'], $_SERVER['REQUEST_TIME'] + 86400, '/');
